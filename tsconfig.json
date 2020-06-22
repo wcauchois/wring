@@ -4,10 +4,10 @@
    "declaration": true,
    "emitDecoratorMetadata": true,
    "experimentalDecorators": true,
-   "target": "ES2019",
+   "target": "es2015",
    "sourceMap": true,
    "lib": [
-     "ES2019"
+     "es2015"
    ]
  },
  "exclude": [

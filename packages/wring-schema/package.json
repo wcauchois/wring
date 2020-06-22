@@ -1,0 +1,22 @@
+{
+  "name": "@wcauchois/wring-schema",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Bill Cauchois <wcauchois@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/wring-schema.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}

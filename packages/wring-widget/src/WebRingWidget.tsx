@@ -1,4 +1,5 @@
 import { h } from "preact";
+import { useEffect } from "preact/hooks";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -8,6 +9,7 @@ const Body = styled.div`
   box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
   display: flex;
   flex-direction: column;
+  background: white;
 `;
 
 const Description = styled.div`
@@ -28,6 +30,15 @@ const Button = styled.a`
 `;
 
 export default function WebRingWidget() {
+  useEffect(() => {
+    async function doFetch() {
+      const response = await fetch('/web-ring.json');
+      const json = await response.json();
+      console.log(`Got data:`, json);
+    }
+    doFetch();
+  });
+
   return (
     <Body>
       <Description>
