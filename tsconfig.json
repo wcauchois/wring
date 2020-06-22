@@ -6,6 +6,7 @@
    "experimentalDecorators": true,
    "target": "es2015",
    "sourceMap": true,
+   "strict": true,
    "lib": [
      "es2015"
    ]

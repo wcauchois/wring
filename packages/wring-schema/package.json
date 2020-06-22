@@ -5,7 +5,7 @@
   "author": "Bill Cauchois <wcauchois@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/wring-schema.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
@@ -14,9 +14,15 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "compile-schema": "yarn ts-node scripts/compileSchema.ts"
   },
   "devDependencies": {
+    "@types/node": "^14.0.13",
+    "async-main": "^1.0.2",
+    "json-schema": "^0.2.5",
+    "json-schema-to-typescript": "^9.1.0",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   }
 }
