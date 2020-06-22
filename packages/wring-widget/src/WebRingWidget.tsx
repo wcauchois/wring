@@ -34,7 +34,7 @@ export default function WebRingWidget() {
     async function doFetch() {
       const response = await fetch('/web-ring.json');
       const json = await response.json();
-      console.log(`Got data:`, json);
+      console.log(`Got the data:`, json);
     }
     doFetch();
   });
