@@ -1,0 +1,24 @@
+{
+  "name": "@wcauchois/wring-widget",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Bill Cauchois <wcauchois@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "preact": "^10.4.4",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0"
+  }
+}
