@@ -25,5 +25,6 @@
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
-  }
+  },
+  "gitHead": "ec1032c9bb2a939db817c3bf8251f04738b5dda5"
 }
