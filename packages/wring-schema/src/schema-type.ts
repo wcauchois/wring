@@ -6,9 +6,9 @@
  */
 
 export interface WebRingConfig {
-  name?: string;
-  next?: SiteConfig[];
-  prev?: SiteConfig[];
+  name: string;
+  next: SiteConfig[];
+  prev: SiteConfig[];
 }
 export interface SiteConfig {
   site: string;

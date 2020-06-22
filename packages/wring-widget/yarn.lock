@@ -168,6 +168,11 @@
     "@types/react-native" "*"
     csstype "^2.2.0"
 
+"@wcauchois/wring-schema@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.4.tgz#ae22d1935120a8fa921f669e7e60b78320c2f143"
+  integrity sha512-C7SAyiopjEZR4ycmO+gIpFlZMS6eRIQpdC3IrzwHYLn/9rSeEzGpXjeWS4odHPn+BBCvduiWVV26C82QHUFBgA==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

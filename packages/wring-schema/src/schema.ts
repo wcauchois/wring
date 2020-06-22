@@ -15,6 +15,7 @@ export const schema: JSONSchema4 = {
       items: { $ref: '#/definitions/SiteConfig' }
     },
   },
+  required: ["name", "next", "prev"],
   additionalProperties: false,
   definitions: {
     SiteConfig: {

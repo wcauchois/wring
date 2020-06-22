@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "tsc",
+    "build": "yarn compile-schema && tsc",
     "compile-schema": "yarn ts-node scripts/compileSchema.ts"
   },
   "devDependencies": {
