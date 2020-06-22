@@ -1,7 +1,7 @@
 import WebRingWidget from "./WebRingWidget";
 import { setupWebRingWidget } from "./setup";
 
-globalThis.webring = {
+(globalThis as any).webring = {
   setupWebRingWidget
 };
 
