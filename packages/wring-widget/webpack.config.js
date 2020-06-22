@@ -2,16 +2,16 @@ const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/app',
+  entry: './src/index',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'app.js'
+    path: path.resolve(__dirname, 'lib'),
+    filename: 'index.js'
   },
   resolve: {
     extensions: ['.ts', '.tsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
@@ -19,4 +19,4 @@ module.exports = {
       }
     ]
   }
-}
+};
