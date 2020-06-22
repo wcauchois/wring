@@ -13,7 +13,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "webpack"
   },
   "dependencies": {
     "preact": "^10.4.4",

@@ -1,2 +1,3 @@
 import WebRingWidget from "./WebRingWidget";
-export { WebRingWidget };
+import { setupWebRingWidget } from "./setup";
+export { WebRingWidget, setupWebRingWidget };

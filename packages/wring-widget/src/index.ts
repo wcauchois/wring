@@ -1,2 +1,11 @@
 import WebRingWidget from "./WebRingWidget";
-export { WebRingWidget };
+import { setupWebRingWidget } from "./setup";
+
+globalThis.webring = {
+  setupWebRingWidget
+};
+
+export {
+  WebRingWidget,
+  setupWebRingWidget
+};
