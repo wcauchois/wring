@@ -8,7 +8,10 @@ module.exports = {
     filename: 'index.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx']
+    extensions: ['.ts', '.tsx'],
+    alias: {
+      react: 'preact/compat'
+    }
   },
   module: {
     rules: [
