@@ -1,0 +1,30 @@
+{
+  "name": "@wcauchois/wring-manage-backend",
+  "version": "0.0.5",
+  "description": "Backend for the webring management interface",
+  "author": "Bill Cauchois <wcauchois@gmail.com>",
+  "homepage": "https://github.com/wcauchois/wring#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcauchois/wring.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/wcauchois/wring/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "typescript": "^3.9.6"
+  }
+}
