@@ -18,13 +18,19 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "tsc-watch --project . --outDir ./lib --onSuccess \"node ./lib/index.js\""
   },
   "bugs": {
     "url": "https://github.com/wcauchois/wring/issues"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",
+    "tsc-watch": "^4.2.9",
     "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "apollo-server": "^2.15.1",
+    "graphql": "^15.2.0"
   }
 }
