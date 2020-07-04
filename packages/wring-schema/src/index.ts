@@ -1,5 +1,11 @@
 import { schema } from "./schema";
 import { WebRingConfig } from "./schema-type";
+import { validateWebRingConfig, ConfigValidationError } from "./validate";
 
-export { WebRingConfig };
+export {
+  WebRingConfig,
+  validateWebRingConfig,
+  ConfigValidationError
+};
+
 export const webRingSchema = schema;
