@@ -1,6 +1,6 @@
-import React, {  } from 'react';
-import { Header } from 'semantic-ui-react';
-import ConfigEditor from './ConfigEditor';
+import React from "react";
+import { Header } from "semantic-ui-react";
+import ConfigEditor from "./ConfigEditor";
 
 export default function Home() {
   return (

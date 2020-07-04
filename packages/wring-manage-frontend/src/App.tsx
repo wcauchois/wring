@@ -1,7 +1,7 @@
-import React, {  } from 'react';
-import { ApolloProvider } from '@apollo/react-hooks';
-import { client } from './lib/client';
-import Home from './components/Home';
+import React from "react";
+import { ApolloProvider } from "@apollo/react-hooks";
+import { client } from "./lib/client";
+import Home from "./components/Home";
 
 const styles = require("./App.module.scss");
 

@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Form } from 'semantic-ui-react';
-import { validateWebRingConfig } from '@wcauchois/wring-schema';
+import React, { useState, useEffect, useRef } from "react";
+import { Form } from "semantic-ui-react";
+import { validateWebRingConfig } from "@wcauchois/wring-schema";
 import axios from "axios";
 import { useDebounce } from "use-debounce";
 
@@ -27,10 +27,7 @@ interface SiteInputProps {
   onChange(newValue: string): void;
 }
 
-export default function SiteInput({
-  value,
-  onChange
-}: SiteInputProps) {
+export default function SiteInput({ value, onChange }: SiteInputProps) {
   const [debouncedValue] = useDebounce(value, 1000);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -76,9 +73,10 @@ export default function SiteInput({
     <Form.Input
       type="text"
       value={value}
-      onChange={e => onChange(e.currentTarget.value)}
+      onChange={(e) => onChange(e.currentTarget.value)}
       loading={loading}
       error={error}
-      icon={success ? "check" : undefined} />
+      icon={success ? "check" : undefined}
+    />
   );
 }
