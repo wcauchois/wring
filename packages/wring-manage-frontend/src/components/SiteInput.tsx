@@ -1,26 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Form } from "semantic-ui-react";
-import { validateWebRingConfig } from "@wcauchois/wring-schema";
-import axios from "axios";
 import { useDebounce } from "use-debounce";
-
-async function validateSite(url: string) {
-  let parsedUrl: URL;
-  try {
-    parsedUrl = new URL(url);
-  } catch (err) {
-    throw new Error(`Invalid URL`);
-  }
-  const configUrl = `${parsedUrl.origin}/web-ring.json`;
-  let data: any;
-  try {
-    const response = await axios.get(configUrl);
-    data = response.data;
-  } catch (err) {
-    throw new Error(`Error retrieving web ring config: ${err.message}`);
-  }
-  validateWebRingConfig(data);
-}
+import { fetchSiteConfig, configUrlForSite } from "../lib/utils";
 
 interface SiteInputProps {
   value: string;
@@ -45,7 +26,7 @@ export default function SiteInput({ value, onChange }: SiteInputProps) {
     async function doValidation() {
       setLoading(true);
       try {
-        await validateSite(debouncedValue);
+        await fetchSiteConfig(configUrlForSite(debouncedValue));
         if (mounted.current) {
           setSuccess(true);
         }
