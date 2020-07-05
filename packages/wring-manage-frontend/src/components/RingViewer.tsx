@@ -1,9 +1,10 @@
-import React, { ReactNode, useEffect, useState, useReducer } from "react";
+import React, { ReactNode, useEffect, useState, useReducer, useRef } from "react";
 import { configQuery, websiteTitleQuery } from "../lib/queries";
 import { useQuery } from "@apollo/react-hooks";
 import { isValidWebRingConfig, WebRingConfig } from "@wcauchois/wring-schema";
 import { Card, List, Loader, Label, Segment } from "semantic-ui-react";
 import RingCrawler, { BaseRingSite } from "../lib/RingCrawler";
+import { uniqueId } from "../lib/utils";
 
 function SiteTitle({ url }: { url: string }) {
   const { data } = useQuery(websiteTitleQuery, {
@@ -36,13 +37,23 @@ function SiteCard({ site }: SiteCardProps) {
   const [, setNext] = useState<BaseRingSite | undefined>(undefined);
   const [, setPrev] = useState<BaseRingSite | undefined>(undefined);
 
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
+  }, [mounted]);
+
   const messages: JSX.Element[] = []; // TODO
 
   useEffect(() => {
     async function doPopulate() {
-      setConfig(await site.maybeConfig);
-      setNext(await site.next);
-      setPrev(await site.prev);
+      if (mounted.current) {
+        setConfig(await site.maybeConfig);
+        setNext(await site.next);
+        setPrev(await site.prev);
+      }
     }
     doPopulate();
   }, [site]);
@@ -102,6 +113,14 @@ function RingViewerMain({ config }: { config: WebRingConfig }) {
   );
   const [loading, setLoading] = useState(true);
 
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
+  }, [mounted]);
+
   const [{ nextSites, prevSites }, dispatch] = useReducer(
     (
       state: { nextSites: BaseRingSite[]; prevSites: BaseRingSite[] },
@@ -128,15 +147,19 @@ function RingViewerMain({ config }: { config: WebRingConfig }) {
   useEffect(() => {
     async function doPopulate(direction: "next" | "prev") {
       for await (const site of crawler.iterDirection(direction)) {
-        dispatch({ site, direction });
+        if (mounted.current) {
+          dispatch({ site, direction });
+        }
       }
     }
     async function populateAll() {
       await Promise.all([doPopulate("next"), doPopulate("prev")]);
-      setLoading(false);
+      if (mounted.current) {
+        setLoading(false);
+      }
     }
     populateAll();
-  }, [crawler]);
+  }, [mounted, crawler]);
 
   return (
     <Segment basic>
@@ -146,12 +169,12 @@ function RingViewerMain({ config }: { config: WebRingConfig }) {
         </Label>
       )}
       <Card.Group style={{ overflowX: "scroll", flexWrap: "nowrap" }}>
-        {prevSites.map((site) => (
-          <SiteCard site={site} />
+        {prevSites.map((site, i) => (
+          <SiteCard key={i} site={site} />
         ))}
         <SiteCard site={crawler.ownSite} />
-        {nextSites.map((site) => (
-          <SiteCard site={site} />
+        {nextSites.map((site, i) => (
+          <SiteCard key={i} site={site} />
         ))}
       </Card.Group>
     </Segment>
@@ -160,9 +183,14 @@ function RingViewerMain({ config }: { config: WebRingConfig }) {
 
 export default function RingViewer() {
   const { data } = useQuery(configQuery);
+  const [key, setKey] = useState("initial");
+
+  useEffect(() => {
+    setKey(uniqueId());
+  }, [data]);
 
   if (data && data.config && isValidWebRingConfig(data.config.data)) {
-    return <RingViewerMain config={data.config.data} />;
+    return <RingViewerMain key={key} config={data.config.data} />;
   } else {
     return null;
   }
