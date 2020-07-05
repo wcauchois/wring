@@ -1,6 +1,6 @@
 {
   "name": "@wcauchois/wring-manage-backend",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Backend for the webring management interface",
   "author": "Bill Cauchois <wcauchois@gmail.com>",
   "homepage": "https://github.com/wcauchois/wring#readme",
