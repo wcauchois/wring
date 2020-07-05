@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
-import { Icon, Message, MessageProps } from 'semantic-ui-react';
+import React, { ReactNode } from "react";
+import { Icon, Message, MessageProps } from "semantic-ui-react";
 
 interface CustomMessageProps {
   children: ReactNode;
-  size?: MessageProps['size'];
+  size?: MessageProps["size"];
 }
 
 export function SuccessMessage(props: CustomMessageProps) {

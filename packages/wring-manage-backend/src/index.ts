@@ -3,6 +3,8 @@ import findRoot from "find-root";
 import fs = require('fs');
 import path = require('path');
 import { GraphQLJSON } from 'graphql-scalars';
+import axios from 'axios';
+import cheerio = require('cheerio');
 
 const packageDirectory = findRoot(process.cwd());
 const configName = `web-ring.json`;
@@ -18,6 +20,7 @@ const typeDefs = gql`
 
   type Query {
     config: WebRingConfig
+    websiteTitle(url: String!): String!
   }
 
   type Mutation {
@@ -54,7 +57,15 @@ const resolvers = {
   JSON: GraphQLJSON,
 
   Query: {
-    config: () => WebRingConfig.fromFile(configPath)
+    config: () => WebRingConfig.fromFile(configPath),
+
+    async websiteTitle(_query: any, { url }: { url: string }) {
+      const response = await axios.get(url, { responseType: "text" });
+      const html = response.data;
+      const $ = cheerio.load(html);
+      // Partly cribbed from: https://github.com/sindresorhus/article-title/blob/49984d2cda89167fc529e06d43bc91b04f9b05b0/index.js#L39
+      return $('title').text().replace(/\r?\n/g, '');
+    }
   },
 
   Mutation: {
