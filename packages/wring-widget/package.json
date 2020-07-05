@@ -1,6 +1,6 @@
 {
   "name": "@wcauchois/wring-widget",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "> TODO: description",
   "author": "Bill Cauchois <wcauchois@gmail.com>",
   "homepage": "",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",
-    "@wcauchois/wring-schema": "^0.0.6",
+    "@wcauchois/wring-schema": "^0.0.7",
     "preact": "^10.4.4",
     "styled-components": "^5.1.1",
     "ts-loader": "^7.0.5",
