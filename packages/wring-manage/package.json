@@ -6,13 +6,10 @@
   "homepage": "https://github.com/wcauchois/wring#readme",
   "license": "ISC",
   "main": "lib/wring-manage.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "files": [],
+  "bin": {
+    "manage": "entry.sh"
   },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wcauchois/wring.git"
@@ -22,5 +19,8 @@
   },
   "bugs": {
     "url": "https://github.com/wcauchois/wring/issues"
+  },
+  "dependencies": {
+    "@wcauchois/wring-manage-backend": "^0.0.8"
   }
 }

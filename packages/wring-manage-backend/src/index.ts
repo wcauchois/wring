@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { ApolloServer, gql } from "apollo-server-express";
 import findRoot from "find-root";
 import fs = require('fs');
@@ -7,6 +8,9 @@ import axios from 'axios';
 import cheerio = require('cheerio');
 import frontend = require('@wcauchois/wring-manage-frontend');
 import express = require('express');
+import open from "open";
+import parseArgs = require('minimist');
+import chalk from 'chalk';
 
 const packageDirectory = findRoot(process.cwd());
 const configName = `web-ring.json`;
@@ -80,6 +84,23 @@ const resolvers = {
   }
 };
 
+interface Argv {
+  '--'?: string[];
+  _: string[];       
+
+  open?: boolean;
+  bind?: string;
+}
+
+const argv: Argv = parseArgs(process.argv.slice(2), {
+  alias: {
+    o: ['open'],
+    b: ['bind']
+  },
+  string: ['bind'],
+  boolean: ['open']
+});
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -92,6 +113,13 @@ app.use(express.static(publicDir));
 const DEFAULT_PORT = 4667;
 const port = process.env.PORT ? parseInt(process.env.PORT) : DEFAULT_PORT;
 
+const serverUrl = `http://localhost:${port}`;
+
 app.listen(port, () => {
   console.log(`Server ready`);
+  if (argv.open) {
+    console.log(`Opening browser`);
+    open(serverUrl);
+  }
+  console.log(chalk.bold(`Server running at ${serverUrl}. Press CTRL+C to exit.`));
 });

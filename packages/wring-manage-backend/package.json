@@ -9,6 +9,9 @@
   "directories": {
     "lib": "lib"
   },
+  "bin": {
+    "wring-manage-backend": "./lib/index.js"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -36,14 +39,18 @@
     "typescript": "^3.9.6"
   },
   "dependencies": {
+    "@types/minimist": "^1.2.0",
     "@wcauchois/wring-manage-frontend": "^0.0.8",
     "apollo-server-express": "^2.15.1",
     "axios": "^0.19.2",
+    "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "find-root": "^1.1.0",
     "graphql": "^15.2.0",
-    "graphql-scalars": "^1.2.1"
+    "graphql-scalars": "^1.2.1",
+    "minimist": "^1.2.5",
+    "open": "^7.0.4"
   },
   "gitHead": "f38bb73938ee9567ead439c5a07c96d4e9100acf"
 }
