@@ -1,6 +1,6 @@
 {
   "name": "@wcauchois/wring-manage-frontend",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -20,7 +20,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "@wcauchois/wring-schema": "^0.0.8",
+    "@wcauchois/wring-schema": "^0.0.9",
     "apollo-boost": "^0.4.9",
     "axios": "^0.19.2",
     "graphql": "^15.2.0",

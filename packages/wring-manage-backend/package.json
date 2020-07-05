@@ -1,6 +1,6 @@
 {
   "name": "@wcauchois/wring-manage-backend",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Backend for the webring management interface",
   "author": "Bill Cauchois <wcauchois@gmail.com>",
   "homepage": "https://github.com/wcauchois/wring#readme",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@types/minimist": "^1.2.0",
-    "@wcauchois/wring-manage-frontend": "^0.0.8",
+    "@wcauchois/wring-manage-frontend": "^0.0.9",
     "apollo-server-express": "^2.15.1",
     "axios": "^0.19.2",
     "chalk": "^4.1.0",

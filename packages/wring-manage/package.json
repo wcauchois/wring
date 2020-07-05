@@ -1,6 +1,6 @@
 {
   "name": "@wcauchois/wring-manage",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Entrypoint for the web ring management interface",
   "author": "Bill Cauchois <wcauchois@gmail.com>",
   "homepage": "https://github.com/wcauchois/wring#readme",
@@ -21,6 +21,6 @@
     "url": "https://github.com/wcauchois/wring/issues"
   },
   "dependencies": {
-    "@wcauchois/wring-manage-backend": "^0.0.8"
+    "@wcauchois/wring-manage-backend": "^0.0.9"
   }
 }
