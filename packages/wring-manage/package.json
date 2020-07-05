@@ -1,0 +1,26 @@
+{
+  "name": "@wcauchois/wring-manage",
+  "version": "0.0.8",
+  "description": "Entrypoint for the web ring management interface",
+  "author": "Bill Cauchois <wcauchois@gmail.com>",
+  "homepage": "https://github.com/wcauchois/wring#readme",
+  "license": "ISC",
+  "main": "lib/wring-manage.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcauchois/wring.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/wcauchois/wring/issues"
+  }
+}
