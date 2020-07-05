@@ -2101,10 +2101,12 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@wcauchois/wring-schema@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.5.tgz#78336396df123a6dfee3d24e1bbf7af17a178e7c"
-  integrity sha512-Ni4KWNhbAts8beS0sCfMFHcGQbJ21CXzundzqnWAshjkPZjYQEPDuAe65Ym6vQ+OmeA3EpVOJV/HIVnVRu9MUA==
+"@wcauchois/wring-schema@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.7.tgz#f12c08f7d607e266896aaa4a9dc5b97dd99220af"
+  integrity sha512-tJqWDDO3tPT84tg9iQuwY8MxqNB0mMAcKhkv6TyF63diMciTJAwBSrgPWOiGTFNMeCrlNs3QUZdOLfhYXXaJhQ==
+  dependencies:
+    ajv "^6.12.2"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
