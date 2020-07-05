@@ -10,6 +10,9 @@
   "bin": {
     "manage": "entry.sh"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wcauchois/wring.git"
@@ -22,5 +25,6 @@
   },
   "dependencies": {
     "@wcauchois/wring-manage-backend": "^0.0.9"
-  }
+  },
+  "gitHead": "7a887324c80e8c839951c2c0bbc51331eb0b2469"
 }
