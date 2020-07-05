@@ -8,6 +8,9 @@
     "index.d.ts",
     "build"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
     "@testing-library/jest-dom": "^4.2.4",
@@ -51,5 +54,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "gitHead": "f38bb73938ee9567ead439c5a07c96d4e9100acf"
 }

@@ -28,7 +28,7 @@
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   },
-  "gitHead": "68858581be23c73240203b0c1552605a21781109",
+  "gitHead": "f38bb73938ee9567ead439c5a07c96d4e9100acf",
   "dependencies": {
     "ajv": "^6.12.2"
   }

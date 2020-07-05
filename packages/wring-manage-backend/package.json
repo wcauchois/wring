@@ -9,6 +9,9 @@
   "directories": {
     "lib": "lib"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "lib"
   ],
@@ -38,5 +41,6 @@
     "find-root": "^1.1.0",
     "graphql": "^15.2.0",
     "graphql-scalars": "^1.2.1"
-  }
+  },
+  "gitHead": "f38bb73938ee9567ead439c5a07c96d4e9100acf"
 }
