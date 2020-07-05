@@ -25,3 +25,9 @@ export const configQuery = gql`
   }
   ${configFragment}
 `;
+
+export const websiteTitleQuery = gql`
+  query websiteTitle($url: String!) {
+    websiteTitle(url: $url)
+  }
+`;

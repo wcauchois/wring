@@ -1,9 +1,19 @@
 import React, { ReactNode, useEffect, useState, useReducer } from "react";
-import { configQuery } from "../lib/queries";
+import { configQuery, websiteTitleQuery } from "../lib/queries";
 import { useQuery } from "@apollo/react-hooks";
 import { isValidWebRingConfig, WebRingConfig } from "@wcauchois/wring-schema";
 import { Card, List, Loader, Label, Segment } from "semantic-ui-react";
 import RingCrawler, { BaseRingSite } from "../lib/RingCrawler";
+
+function SiteTitle({ url }: { url: string }) {
+  const { data } = useQuery(websiteTitleQuery, {
+    variables: { url }
+  });
+
+  return <>
+    {data?.websiteTitle ?? `Unknown Site`}
+  </>;
+}
 
 interface SiteCardProps {
   site: BaseRingSite;
@@ -37,10 +47,19 @@ function SiteCard({ site }: SiteCardProps) {
     doPopulate();
   }, [site]);
 
+  const style: React.CSSProperties = {
+    minWidth: `300px`
+  };
+  if (site.isOwnSite) {
+    style.border = `3px solid #ffe319`;
+  }
+
   return (
-    <Card style={site.isOwnSite ? { border: `3px solid #ffe319` } : {}}>
+    <Card style={style}>
       <Card.Content>
-        <Card.Header>{config?.name ?? `Unknown Site`}</Card.Header>
+        <Card.Header>
+          <SiteTitle url={site.url} />
+        </Card.Header>
 
         {metaDescription && <Card.Meta>{metaDescription}</Card.Meta>}
 
