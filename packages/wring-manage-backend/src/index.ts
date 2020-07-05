@@ -1,14 +1,17 @@
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer, gql } from "apollo-server-express";
 import findRoot from "find-root";
 import fs = require('fs');
 import path = require('path');
 import { GraphQLJSON } from 'graphql-scalars';
 import axios from 'axios';
 import cheerio = require('cheerio');
+import frontend = require('@wcauchois/wring-manage-frontend');
+import express = require('express');
 
 const packageDirectory = findRoot(process.cwd());
 const configName = `web-ring.json`;
 const configPath = path.join(packageDirectory, configName);
+const publicDir = frontend.getPublicDir();
 
 const typeDefs = gql`
   scalar JSON
@@ -79,12 +82,16 @@ const resolvers = {
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
 });
+
+const app = express();
+server.applyMiddleware({ app });
+app.use(express.static(publicDir));
 
 const DEFAULT_PORT = 4667;
 const port = process.env.PORT ? parseInt(process.env.PORT) : DEFAULT_PORT;
 
-server.listen(port).then(({ url }) => {
-  console.log(`Server ready at ${url}`);
+app.listen(port, () => {
+  console.log(`Server ready`);
 });

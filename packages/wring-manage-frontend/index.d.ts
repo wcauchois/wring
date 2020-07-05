@@ -1,3 +1,3 @@
-declare module 'wring-manage-frontend' {
+declare module '@wcauchois/wring-manage-frontend' {
   export function getPublicDir(): string;
 }
