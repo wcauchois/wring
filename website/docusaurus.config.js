@@ -1,6 +1,6 @@
 module.exports = {
   title: 'W/RING',
-  tagline: 'Decentralized webrings for the 21st century',
+  tagline: 'Decentralized webrings for the modern web',
   url: 'https://wring.netlify.app',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -34,7 +34,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
+          homePageId: 'concepts_protocol',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
