@@ -26,10 +26,15 @@ const features = [
   },
   {
     title: <>Fight the power</>,
-    description: (
+    description: () => (
       <>
-        You're just a drone scrolling Instagram. Hosting is free. Make something,
+        You're just a drone scrolling Instagram. Hosting is free<sup>*</sup>. Make something,
         then embrace the alt-discoverability of a web ring.
+        <br />
+        <br />
+        <sup>*</sup>I mean it. See our guides for
+        {" "}<Link to={useBaseUrl('docs/getting_started_netlify')}>Netlify</Link> and
+        {" "}<Link to={useBaseUrl('docs/getting_started_s3')}>S3</Link>.
       </>
     ),
   },
@@ -45,7 +50,7 @@ function Feature({imageUrl, title, description}) {
         </div>
       )}
       <h3>{title}</h3>
-      <p>{description}</p>
+      <p>{typeof description === 'function' ? description() : description}</p>
     </div>
   );
 }
