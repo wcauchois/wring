@@ -1,6 +1,8 @@
 ---
 id: concept_widget
-title: 1. The Widget
+title: 2. The Widget
 ---
 
-TODO
+The web-ring widget is an embeddable piece of code that reads the /web-ring.json file
+at the root of your site and renders a UI control that users can use to navigate
+the web ring.
