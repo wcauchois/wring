@@ -1,5 +1,6 @@
 {
   "name": "@wcauchois/wring-manage-frontend",
+  "description": "Frontend for the webring management interface",
   "version": "0.0.10",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,7 +1,7 @@
 {
   "name": "@wcauchois/wring-widget",
   "version": "0.0.10",
-  "description": "> TODO: description",
+  "description": "Embeddable widget for web rings",
   "author": "Bill Cauchois <wcauchois@gmail.com>",
   "homepage": "",
   "license": "ISC",
