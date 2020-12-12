@@ -2101,10 +2101,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@wcauchois/wring-schema@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.7.tgz#f12c08f7d607e266896aaa4a9dc5b97dd99220af"
-  integrity sha512-tJqWDDO3tPT84tg9iQuwY8MxqNB0mMAcKhkv6TyF63diMciTJAwBSrgPWOiGTFNMeCrlNs3QUZdOLfhYXXaJhQ==
+"@wcauchois/wring-schema@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.11.tgz#91f6ab76be6b8a36ee90bab8aacd5b43449da5c3"
+  integrity sha512-alGI19VLgp1it2S0Epwmvx6vV4+M2T7XhSt1h6UOpXPSA9zqP0zZnWi3B+E2Zrg4lLn26IqNUGdYoNTU/c0f3g==
   dependencies:
     ajv "^6.12.2"
 
@@ -6076,9 +6076,9 @@ inherits@2.0.3:
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
 ini@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
+  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 inquirer@7.0.4, inquirer@^7.0.0:
   version "7.0.4"
