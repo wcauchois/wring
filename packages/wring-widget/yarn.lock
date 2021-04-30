@@ -168,10 +168,12 @@
     "@types/react-native" "*"
     csstype "^2.2.0"
 
-"@wcauchois/wring-schema@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.4.tgz#ae22d1935120a8fa921f669e7e60b78320c2f143"
-  integrity sha512-C7SAyiopjEZR4ycmO+gIpFlZMS6eRIQpdC3IrzwHYLn/9rSeEzGpXjeWS4odHPn+BBCvduiWVV26C82QHUFBgA==
+"@wcauchois/wring-schema@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.11.tgz#91f6ab76be6b8a36ee90bab8aacd5b43449da5c3"
+  integrity sha512-alGI19VLgp1it2S0Epwmvx6vV4+M2T7XhSt1h6UOpXPSA9zqP0zZnWi3B+E2Zrg4lLn26IqNUGdYoNTU/c0f3g==
+  dependencies:
+    ajv "^6.12.2"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -347,6 +349,16 @@ ajv@^6.1.0, ajv@^6.10.2:
   version "6.12.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
   integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+ajv@^6.12.2:
+  version "6.12.6"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
+  integrity sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
   dependencies:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
@@ -2505,9 +2517,9 @@ split-string@^3.0.1, split-string@^3.0.2:
     extend-shallow "^3.0.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
