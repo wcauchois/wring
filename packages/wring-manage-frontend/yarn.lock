@@ -2101,10 +2101,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@wcauchois/wring-schema@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.7.tgz#f12c08f7d607e266896aaa4a9dc5b97dd99220af"
-  integrity sha512-tJqWDDO3tPT84tg9iQuwY8MxqNB0mMAcKhkv6TyF63diMciTJAwBSrgPWOiGTFNMeCrlNs3QUZdOLfhYXXaJhQ==
+"@wcauchois/wring-schema@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.11.tgz#91f6ab76be6b8a36ee90bab8aacd5b43449da5c3"
+  integrity sha512-alGI19VLgp1it2S0Epwmvx6vV4+M2T7XhSt1h6UOpXPSA9zqP0zZnWi3B+E2Zrg4lLn26IqNUGdYoNTU/c0f3g==
   dependencies:
     ajv "^6.12.2"
 
@@ -8436,9 +8436,9 @@ path-key@^3.1.0:
   integrity sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==
 
 path-parse@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
-  integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
 path-to-regexp@0.1.7:
   version "0.1.7"
