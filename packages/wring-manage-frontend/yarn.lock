@@ -2101,10 +2101,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@wcauchois/wring-schema@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.7.tgz#f12c08f7d607e266896aaa4a9dc5b97dd99220af"
-  integrity sha512-tJqWDDO3tPT84tg9iQuwY8MxqNB0mMAcKhkv6TyF63diMciTJAwBSrgPWOiGTFNMeCrlNs3QUZdOLfhYXXaJhQ==
+"@wcauchois/wring-schema@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@wcauchois/wring-schema/-/wring-schema-0.0.11.tgz#91f6ab76be6b8a36ee90bab8aacd5b43449da5c3"
+  integrity sha512-alGI19VLgp1it2S0Epwmvx6vV4+M2T7XhSt1h6UOpXPSA9zqP0zZnWi3B+E2Zrg4lLn26IqNUGdYoNTU/c0f3g==
   dependencies:
     ajv "^6.12.2"
 
@@ -9439,9 +9439,9 @@ qs@6.7.0:
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^4.1.0:
   version "4.3.4"
